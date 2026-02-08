@@ -66,14 +66,12 @@ export function getNodePath(root: TreeNode[], id: string): number[] | null {
 
 export function getNodeAtPath(root: TreeNode[], path: number[]): { node: TreeNode; parent: TreeNode[]; index: number } | null {
   let current: TreeNode[] = root;
-  let index = 0;
   for (let i = 0; i < path.length - 1; i++) {
     const idx = path[i];
     if (idx < 0 || idx >= current.length) return null;
     const node = current[idx];
     if (!node.children) return null;
     current = node.children;
-    index = path[path.length - 1];
   }
   const idx = path[path.length - 1];
   if (idx < 0 || idx >= current.length) return null;
