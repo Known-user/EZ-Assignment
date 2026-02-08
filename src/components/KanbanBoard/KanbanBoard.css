@@ -1,0 +1,126 @@
+.kanban-board {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  min-height: 400px;
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .kanban-board {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.kanban-column {
+  flex: 0 0 280px;
+  min-width: 280px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+}
+
+.kanban-column.drop-over {
+  background: #e3f2fd;
+  outline: 2px dashed #2196f3;
+}
+
+.kanban-column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.kanban-column-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.kanban-column-add {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: #2196f3;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kanban-column-add:hover {
+  background: #1976d2;
+}
+
+.kanban-column-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kanban-card {
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+}
+
+.kanban-card:active {
+  cursor: grabbing;
+}
+
+.kanban-card.dragging {
+  opacity: 0.5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.kanban-card-title {
+  flex: 1;
+  min-width: 0;
+  word-break: break-word;
+}
+
+.kanban-card-delete {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  color: #999;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0;
+}
+
+.kanban-card-delete:hover {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.kanban-card-edit {
+  flex: 1;
+  padding: 4px 8px;
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+  font-size: inherit;
+}
