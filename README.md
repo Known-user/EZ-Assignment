@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Open [ez-assignment-gray-kappa.vercel.app](ez-assignment-gray-kappa.vercel.app).
+Open [https://ez-assignment-gray-kappa.vercel.app/](https://ez-assignment-gray-kappa.vercel.app/).
 
 ## Build & preview
 
